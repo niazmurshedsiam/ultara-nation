@@ -11,10 +11,11 @@ function App() {
     .then(data=>setCountries(data));
 
   },[])
+  const handleAddCountry = (country) =>{console.log('add country',country)}
   return (
     <div className="App">
         {
-          countries.map(country => <Country country={country} key={country.alpha3Code}></Country>)
+          countries.map(country => <Country country={country} handleAddCountry={handleAddCountry} key={country.alpha3Code}></Country>)
         }
        
     </div>
