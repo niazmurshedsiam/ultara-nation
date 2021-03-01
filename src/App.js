@@ -13,13 +13,10 @@ function App() {
   },[])
   return (
     <div className="App">
-      {/* <h1>This is country {countries.length}</h1> */}
-      <ul>
         {
-           countries.map(country=><Country name={country.name}></Country>)
-           
+          countries.map(country => <Country country={country} key={country.alpha3Code}></Country>)
         }
-       </ul>
+       
     </div>
   );
 }
