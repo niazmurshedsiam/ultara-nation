@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React,{ useEffect, useState } from 'react';
+import Country from './component/Country/Country';
 
 function App() {
   const [countries,setCountries]= useState([]);
@@ -12,10 +13,10 @@ function App() {
   },[])
   return (
     <div className="App">
-      <h1>This is country {countries.length}</h1>
+      {/* <h1>This is country {countries.length}</h1> */}
       <ul>
         {
-           countries.map(country=><li>{country.name} {country.capital} {country.population}</li>)
+           countries.map(country=><Country name={country.name}></Country>)
            
         }
        </ul>
